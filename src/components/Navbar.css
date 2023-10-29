@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Teko:wght@300&display=swap');
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 0;
+    background-color: #333;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-link-group {
+    display: flex;
+    position: absolute;
+    justify-items: flex-end;
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attractions,
+.tickets,
+.services {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.home-image {
+    height: 50px;
+    display: block;
+    margin-left: 1rem;
+}
+
+.home {
+    margin-right: auto;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    line-height: 70px;
+    font-size: 35px;
+}
+
+.navbar .nav-link:visited {
+    color: white;
+}
+
+.link-holder {
+    justify-self: flex-end;
+}
