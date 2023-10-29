@@ -2,7 +2,6 @@
 
 .navbar {
     display: flex;
-    align-items: center;
     padding: 0 0;
     background-color: #333;
     width: 100%;
@@ -17,9 +16,9 @@
     display: flex;
     position: absolute;
     justify-items: flex-end;
-    height: 70px;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 15px;
 }
 
 .attractions,
@@ -37,6 +36,7 @@
 
 .home {
     margin-right: auto;
+    align-self: center;
 }
 
 .nav-link {
@@ -44,14 +44,12 @@
     text-decoration: none;
     font-family: 'Teko', sans-serif;
     font-weight: 300;
-    line-height: 70px;
-    font-size: 35px;
+    font-size: 30px;
+    align-self: center;
 }
 
 .navbar .nav-link:visited {
     color: white;
 }
 
-.link-holder {
-    justify-self: flex-end;
-}
+.link-holder {}

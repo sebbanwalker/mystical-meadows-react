@@ -32,13 +32,13 @@ function Navbar() {
             </Link>
             <div className="nav-link-group">
                 <motion.div classname="link-holder" whileHover={hoverAnimation}>
-                    <Link className="nav-link attractions" to="/attractions">Attractions</Link>
+                    <Link className="nav-link attractions" to="/attractions">ATTRACTIONS</Link>
                 </motion.div>
                 <motion.div classname="link-holder" whileHover={hoverAnimation}>
-                    <Link className="nav-link services" to="/services">Services</Link>
+                    <Link className="nav-link services" to="/services">SERVICES</Link>
                 </motion.div>
                 <motion.div classname="link-holder" whileHover={hoverAnimation}>
-                    <Link className="nav-link tickets" to="/tickets">Tickets</Link>
+                    <Link className="nav-link tickets" to="/tickets">TICKETS</Link>
                 </motion.div>
             </div>
         </div>
