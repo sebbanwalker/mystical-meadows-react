@@ -1,0 +1,169 @@
+/* @import '../node_modules/react-datepicker/src/stylesheets/datepicker.scss'; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'PinkChicken';
+    src: url('../assets/PinkChicken-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.home-body-container {
+    position: relative;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.home-welcome-section {
+    position: relative;
+    text-align: center;
+}
+
+.home-background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.home-welcome-message {
+    position: absolute;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    caret-color: transparent;
+}
+
+.home-welcome-message__text {
+    margin-top: -1rem;
+}
+
+.home-ticket-container {
+    display: flex;
+}
+
+.home-ticket-purchase-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 800px;
+    height: 8rem;
+    margin: auto;
+    background: linear-gradient(#0CF25D, #08a640);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.ticket-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0rem;
+    width: 400px;
+    caret-color: transparent;
+}
+
+.ticket-message {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 0rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ticket-message-small {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 0rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.home-calendar-container {
+    display: flex;
+    place-items: center;
+}
+
+.home-search-button {
+    cursor: pointer;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(#16d947, #09a33a);
+    font-family: 'Bebas Neue';
+    font-size: 1.6rem;
+    border: 0;
+    width: 110px;
+    filter: drop-shadow(2px 2px 3px #363636);
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.home-search-button:hover {
+    background: linear-gradient(#109732, #066b26);
+    box-shadow: inset 1px 1px 4px #333333;
+}
+
+.date-picker {
+    background-color: rgb(181, 181, 181) !important;
+    color: rgb(55, 55, 55);
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'PinkChicken';
+    border: 0;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 4px #333333;
+}
+
+.date-picker:hover {
+
+    background-color: rgb(210, 210, 210) !important;
+    color: #08a640;
+}
+
+.react-datepicker__header {
+    background-color: #08a640 !important;
+}
+
+.react-datepicker__current-month {
+    color: #ffffff !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    color: #333333 !important;
+}
+
+.react-datepicker__day--selected {
+    background-color: #0CF25D !important;
+    color: #ffffff !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: #f0f0f0 !important;
+}

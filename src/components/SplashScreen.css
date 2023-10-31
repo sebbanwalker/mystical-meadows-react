@@ -12,15 +12,12 @@
     width: 100%;
     height: 100%;
     background-color: #012030;
-    /* Or any color you prefer */
     z-index: 1000;
-    /* High z-index to cover everything else */
 }
 
 .logo {
     width: 300px;
     margin-bottom: 20px;
-    /* Or any spacing you prefer */
 }
 
 .slogan {

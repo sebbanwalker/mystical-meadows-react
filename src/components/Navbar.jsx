@@ -3,24 +3,26 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Navbar.css';
 import homeImage from '../assets/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
     const hoverAnimation = {
         scale: 1.02,
-        color: "rgb(8,191,70)", // The color you want to flash
+        color: "rgb(8,191,70)",
         transition: {
-          // Use a tween transition for scale to match the color transition
+
           scale: {
-            duration: 0.5,           // Match the duration with the color transition
+            duration: 0.5,
             repeat: Infinity,
             repeatType: "reverse",
-            ease: "easeInOut",       // Can be adjusted to match the feel of the color transition
+            ease: "easeInOut",
           },
           color: {
             duration: 1,
             repeat: Infinity,
             repeatType: "reverse",
-            ease: "easeInOut",       // Ensure both color and scale use the same easing
+            ease: "easeInOut",
           },
         },
     };
@@ -40,6 +42,17 @@ function Navbar() {
                 <motion.div classname="link-holder" whileHover={hoverAnimation}>
                     <Link className="nav-link tickets" to="/tickets">TICKETS</Link>
                 </motion.div>
+            </div>
+            <div className="navbar-controls">
+                <button className="icon-button">
+                    <FontAwesomeIcon icon={faSearch} />
+                </button>
+                <Link className="icon-button" to="/login">
+                    <FontAwesomeIcon icon={faUser} />
+                </Link>
+                <Link className="icon-button" to="/cart">
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                </Link>
             </div>
         </div>
     );

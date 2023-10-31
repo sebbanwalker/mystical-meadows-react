@@ -1,15 +1,14 @@
-// SplashScreen.jsx
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import logoImage from '../assets/logo.png';
-import './SplashScreen.css'; // Ensure you have the CSS file imported
+import './SplashScreen.css';
 
 const SplashScreen = () => {
   const containerVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 0.5 } },
-    exit: { opacity: 0, transition: { duration: 0.5 } },
+    initial: { opacity: 0, scale: 0.9 },
+    animate: { opacity: 1, scale: 1, transition: { duration: 3 } },
+    exit: { opacity: 0, scale: 1.4, transition: { duration: 1 } },
   };
 
   const logoVariants = {
@@ -25,9 +24,8 @@ const SplashScreen = () => {
       exit="exit"
       className="splash-screen"
     >
-      {/* Your logo or any other content you want to display */}
       <motion.img 
-        src={logoImage} // Replace with your logo's path
+        src={logoImage} 
         variants={logoVariants}
         initial="initial"
         animate="animate"

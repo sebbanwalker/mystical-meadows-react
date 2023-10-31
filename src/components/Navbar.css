@@ -2,6 +2,8 @@
 
 .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 0;
     background-color: #333;
     width: 100%;
@@ -10,6 +12,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    caret-color: transparent;
 }
 
 .nav-link-group {
@@ -18,7 +21,7 @@
     justify-items: flex-end;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .attractions,
@@ -52,4 +55,44 @@
     color: white;
 }
 
-.link-holder {}
+.navbar-controls {
+    display: flex;
+    gap: 20px;
+    margin-right: 25px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+}
+
+.icon-button svg {
+    font-size: 1.5rem;
+}
+
+.icon-button:hover {
+    background-color: rgb(8, 191, 70, 0.5);
+    border-radius: 3px;
+}
+
+.icon-button .fa-icon {
+    font-size: 1.5rem;
+}
+
+.nav-button {
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}

@@ -4,7 +4,9 @@ import './App.css'
 import Navbar from './components/Navbar';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BrowserRouter } from 'react-router-dom';
+import HomeBodyContainer from './components/HomeBodyContainer';
 import SplashScreen from './components/SplashScreen';
+import FeatureContainer from './components/FeatureContainer';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +43,8 @@ function App() {
                         variants={navbarVariants}
                     >
                         <Navbar />
-                        {/* Rest of your components */}
+                        <HomeBodyContainer />
+                        <FeatureContainer />
                     </motion.div>
                 )}
             </div>
