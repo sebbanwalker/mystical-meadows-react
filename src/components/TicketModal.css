@@ -1,0 +1,24 @@
+/* TicketModal.css */
+
+.ticket-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.ticket-modal-content {
+    position: sticky !important;
+    background: #012030;
+    padding: 20px;
+    height: 40rem;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 3;
+}

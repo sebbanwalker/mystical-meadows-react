@@ -9,6 +9,7 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 import Navbar from './components/Navbar';
 import SplashScreen from './components/SplashScreen';
 import Modal from './components/Modal';
+import TicketModal from './components/TicketModal';
 
 //Home 
 
@@ -17,8 +18,15 @@ function App() {
   //Splashscreen animation
   const [isLoading, setIsLoading] = useState(true);
   const [isFirstMount, setIsFirstMount] = useState(true);
+  const [isTicketModalOpen, setTicketModalOpen] = useState(false);
 
-  
+  const handleOpenTicketModal = () => {
+    setTicketModalOpen(true);
+  };
+
+  const handleCloseTicketModal = () => {
+    setTicketModalOpen(false);
+  };
 
   useEffect(() => {
     // Set a timeout to simulate the loading time of the splash screen
@@ -58,7 +66,14 @@ function App() {
             >
               <Navbar />
               <AnimatePresence wait>
-                <AnimatedRoutes isFirstMount={isFirstMount} />
+                <AnimatedRoutes isFirstMount={isFirstMount} onOpenTicketModal={handleOpenTicketModal}/>
+                {isTicketModalOpen && (
+                  <TicketModal
+                  key="ticket-modal"
+                  isOpen={isTicketModalOpen}
+                  onClose={handleCloseTicketModal}
+                />
+                )}
               </AnimatePresence>
             </motion.div>
           )}

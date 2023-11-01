@@ -7,17 +7,16 @@ import Attractions from '../pages/Attractions';
 import Tickets from '../pages/Tickets';
 import Services from '../pages/Services';
 
-const AnimatedRoutes = ({ isFirstMount }) => {
+const AnimatedRoutes = ({ isFirstMount, onOpenTicketModal }) => {
   const location = useLocation();
 
   return (
     <AnimatePresence wait>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home isFirstMount={isFirstMount} />} />
+        <Route path="/" element={<Home isFirstMount={isFirstMount} onOpenTicketModal={onOpenTicketModal} />} />
         <Route path="/attractions" element={<Attractions />} />
         <Route path="/tickets" element={<Tickets />} />
         <Route path="/services" element={<Services />} />
-        {/* ... other routes */}
       </Routes>
     </AnimatePresence>
   );

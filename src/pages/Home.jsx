@@ -7,7 +7,7 @@ import FeatureContainer from '../components/FeatureContainer';
 import Footer from '../components/Footer';
 
 
-const Home = ({ isFirstMount }) => {
+const Home = ({ isFirstMount, onOpenTicketModal } ) => {
 
     useEffect(() => {
         console.log('isFirstMount changed:', isFirstMount);
@@ -43,7 +43,7 @@ const Home = ({ isFirstMount }) => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <HomeBodyContainer />
+      <HomeBodyContainer  onOpenTicketModal={onOpenTicketModal} />
       <FeatureContainer />
       <Footer />
     </motion.div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import FeatureItem from './FeatureItem';
-import Modal from './Modal'; // Assume you have a Modal component ready to use
+import Modal from './Modal';
 import './FeatureContainer.css';
 import image1 from '../assets/family-coaster.png';
 import image2 from '../assets/festival.png';
@@ -14,11 +14,10 @@ const FeatureContainer = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleSeeMoreClick = (id) => {
-    setModalContentId(id); // Set the ID here
+    setModalContentId(id);
     setModalOpen(true);
   };
 
-  // This function will be used to close the modal
   const handleCloseModal = () => {
     setModalOpen(false);
     setModalContentId(null)
@@ -63,6 +62,7 @@ const FeatureContainer = () => {
       </div>
       {isModalOpen && (
         <Modal
+          key="feature-modal"
           id={modalContentId}
           onClose={handleCloseModal}
         />
