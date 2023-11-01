@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import HomeBodyContainer from './components/HomeBodyContainer';
 import SplashScreen from './components/SplashScreen';
 import FeatureContainer from './components/FeatureContainer';
+import Footer from './components/Footer';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +46,7 @@ function App() {
                         <Navbar />
                         <HomeBodyContainer />
                         <FeatureContainer />
+                        <Footer />
                     </motion.div>
                 )}
             </div>

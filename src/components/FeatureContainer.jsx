@@ -55,10 +55,10 @@ const FeatureItem = ({ imageUrl, buttonText, delay, text }) => {
 const FeatureContainer = () => {
   return (
     <div className="home-feature-container">
-      <FeatureItem imageUrl={image1} buttonText="See More" text="Family Tickets" delay={0.1} />
-      <FeatureItem imageUrl={image2} buttonText="See More" text="Family Tickets" delay={0.2} />
-      <FeatureItem imageUrl={image3} buttonText="See More" text="Family Tickets" delay={0.3} />
-      <FeatureItem imageUrl={image4} buttonText="See More" text="Family Tickets" delay={0.4} />
+      <FeatureItem imageUrl={image1} buttonText="See More" text="Family Deals" delay={0.1} />
+      <FeatureItem imageUrl={image2} buttonText="See More" text="Experience Meadow Festival 2024" delay={0.2} />
+      <FeatureItem imageUrl={image3} buttonText="See More" text="Feast Your Senses" delay={0.3} />
+      <FeatureItem imageUrl={image4} buttonText="See More" text="Rides To Remember" delay={0.4} />
     </div>
   );
 };
