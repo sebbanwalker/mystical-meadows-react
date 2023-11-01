@@ -5,16 +5,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { BrowserRouter } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes'; 
 
-//Pages
-
-import Home from './pages/Home';
-import Attractions from './pages/Attractions';
-import Tickets from './pages/Tickets';
-import Services from './pages/Services';
-
 //Components
 import Navbar from './components/Navbar';
 import SplashScreen from './components/SplashScreen';
+import Modal from './components/Modal';
 
 //Home 
 

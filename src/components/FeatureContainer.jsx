@@ -1,67 +1,73 @@
-//Feature Container
+// FeatureContainer.jsx
 
-import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useState } from 'react';
+import FeatureItem from './FeatureItem';
+import Modal from './Modal'; // Assume you have a Modal component ready to use
 import './FeatureContainer.css';
 import image1 from '../assets/family-coaster.png';
 import image2 from '../assets/festival.png';
 import image3 from '../assets/burger.png';
 import image4 from '../assets/coaster.png';
 
-const FeatureItem = ({ imageUrl, buttonText, delay, text }) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    rootMargin: '-200px 0px',
-  });
+const FeatureContainer = () => {
+  const [modalContentId, setModalContentId] = useState(null);
+  const [isModalOpen, setModalOpen] = useState(false);
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
+  const handleSeeMoreClick = (id) => {
+    setModalContentId(id); // Set the ID here
+    setModalOpen(true);
+  };
 
-  const variants = {
-    hidden: { y: 100, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay,
-        type: 'spring',
-        stiffness: 120,
-        damping: 20,
-      },
-    },
+  // This function will be used to close the modal
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setModalContentId(null)
+    console.log('handleCloseModal: run')
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-      className="feature-item"
-    >
-      <div className="feature-image-container">
-        <img src={imageUrl} alt="Feature" className="feature-image" />
-        <div className="feature-image-overlay"></div>
-        <div className="feature-text">{text}</div>
+    <>
+      <div className="home-feature-container">
+        <FeatureItem
+          id='1'
+          imageUrl={image1}
+          buttonText="See More"
+          text="Family Deals"
+          delay={0.1}
+          onButtonClick={() => handleSeeMoreClick("1")}
+        />
+        <FeatureItem
+          id='2'
+          imageUrl={image2}
+          buttonText="See More"
+          text="Experience Meadow Festival 2024"
+          delay={0.2}
+          onButtonClick={() => handleSeeMoreClick("2")}
+        />
+        <FeatureItem
+          id='3'
+          imageUrl={image3}
+          buttonText="See More"
+          text="Feast Your Senses"
+          delay={0.3}
+          onButtonClick={() => handleSeeMoreClick("3")}
+        />
+        <FeatureItem
+          id='4'
+          imageUrl={image4}
+          buttonText="See More"
+          text="Rides To Remember"
+          delay={0.4}
+          onButtonClick={() => handleSeeMoreClick("4")}
+        />
       </div>
-      <button className="feature-button">{buttonText}</button>
-    </motion.div>
-  );
-};
-
-const FeatureContainer = () => {
-  return (
-    <div className="home-feature-container">
-      <FeatureItem imageUrl={image1} buttonText="See More" text="Family Deals" delay={0.1} />
-      <FeatureItem imageUrl={image2} buttonText="See More" text="Experience Meadow Festival 2024" delay={0.2} />
-      <FeatureItem imageUrl={image3} buttonText="See More" text="Feast Your Senses" delay={0.3} />
-      <FeatureItem imageUrl={image4} buttonText="See More" text="Rides To Remember" delay={0.4} />
-    </div>
+      {isModalOpen && (
+        <Modal
+          id={modalContentId}
+          onClose={handleCloseModal}
+        />
+      )}
+    </>
   );
 };
 

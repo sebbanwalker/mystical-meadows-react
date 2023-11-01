@@ -6,18 +6,18 @@ import HomeBodyContainer from '../components/HomeBodyContainer';
 import FeatureContainer from '../components/FeatureContainer';
 import Footer from '../components/Footer';
 
-// Define the variants inside the component if they need to access props
+
 const Home = ({ isFirstMount }) => {
 
     useEffect(() => {
         console.log('isFirstMount changed:', isFirstMount);
         }, [isFirstMount]);
 
-  // Conditional variants based on isFirstMount
+
   const pageVariants = {
     initial: {
       opacity: isFirstMount ? 1 : 0,
-      x: isFirstMount ? 0 : "-100vw", // No slide if it's the first mount
+      x: isFirstMount ? 0 : "-100vw", 
     },
     in: {
       opacity: 1,
