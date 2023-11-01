@@ -40,7 +40,7 @@
 }
 
 .feature-button {
-    background-color: #0CF25D;
+    background: linear-gradient(#16d947, #09a33a);
     color: white;
     border: none;
     border-radius: 5px;
@@ -52,10 +52,11 @@
     height: 4rem;
     font-size: 35px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.643);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.6), 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .feature-button:hover {
-    background-color: #08a640;
+    background: linear-gradient(#109732, #066b26);
 }
 
 .feature-text {

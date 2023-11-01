@@ -1,66 +1,72 @@
-// TicketModal.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './TicketModal.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const TicketModal = ({ isOpen, onClose }) => {
-  // Variants for the backdrop
-  const backdropVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-    exit: { opacity: 0 }
-  };
+  const [loading, setLoading] = useState(true);
 
-  // Variants for the modal
-  const modalVariants = {
-    hidden: {
-      scale: 0.5,
-      opacity: 0
-    },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100
-      }
-    },
-    exit: {
-      scale: 0.5,
-      opacity: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100
-      }
-    }
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // 3 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Only render the modal if it's open
   if (!isOpen) return null;
 
+  // Variants for fade in and out
+  const messageVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 }
+  };
+
   return (
     <motion.div
       className="ticket-modal-backdrop"
-      variants={backdropVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      onClick={onClose} // Close modal when backdrop is clicked
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
     >
       <motion.div
         className="ticket-modal-content"
-        variants={modalVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        onClick={(e) => e.stopPropagation()} // Stop click event from closing the modal when clicking on the content
+        initial={{ scale: 0.5, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.5, opacity: 0 }}
+        onClick={(e) => e.stopPropagation()}
       >
-        <div>Searching for tickets...</div>
-        <button onClick={() => {
-            console.log('Close button clicked');
-            onClose();
-        }}>
-            Close
+        <AnimatePresence wait>
+          {loading ? (
+            <motion.div
+              key="loading"
+              variants={messageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="message"
+            >
+              Searching for tickets...
+              {/* Replace the emoji with your loading spinner if needed */}
+              <div className="loading-icon"></div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="no-tickets"
+              variants={messageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="message"
+            >
+              No tickets found
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <button onClick={onClose}>
+          Close
         </button>
       </motion.div>
     </motion.div>
@@ -68,4 +74,3 @@ const TicketModal = ({ isOpen, onClose }) => {
 };
 
 export default TicketModal;
-

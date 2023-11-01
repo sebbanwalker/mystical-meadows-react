@@ -1,6 +1,6 @@
 // Modal.jsx
 import React from 'react';
-import './Modal.css'; // You'll need to create this CSS file for styling
+import './Modal.css';
 import image1 from '../assets/family-coaster.png';
 import image2 from '../assets/festival.png';
 import image3 from '../assets/burger.png';
