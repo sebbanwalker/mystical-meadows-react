@@ -19,7 +19,7 @@ const TicketModal = ({ isOpen, onClose }) => {
   // Variants for fade in and out
   const messageVariants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    animate: { opacity: 1, transition: { delay: 0.5 } },
     exit: { opacity: 0 }
   };
 
@@ -38,36 +38,38 @@ const TicketModal = ({ isOpen, onClose }) => {
         exit={{ scale: 0.5, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <AnimatePresence wait>
-          {loading ? (
-            <motion.div
-              key="loading"
-              variants={messageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="message"
-            >
-              Searching for tickets...
-              {/* Replace the emoji with your loading spinner if needed */}
-              <div className="loading-icon"></div>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="no-tickets"
-              variants={messageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="message"
-            >
-              No tickets found
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <button onClick={onClose}>
-          Close
-        </button>
+        <div class="content-filler">
+            <AnimatePresence className="loader" wait>
+            {loading ? (
+                <motion.div
+                key="loading"
+                variants={messageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="message"
+                >
+                Searching for tickets...
+                {/* Replace the emoji with your loading spinner if needed */}
+                <div className="loading-icon"></div>
+                </motion.div>
+            ) : (
+                <motion.div
+                key="no-tickets"
+                variants={messageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="message"
+                >
+                No tickets found :(
+                </motion.div>
+            )}
+            </AnimatePresence>
+            <button onClick={onClose} className="close-button">
+            Close
+            </button>
+        </div>
       </motion.div>
     </motion.div>
   );

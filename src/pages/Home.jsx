@@ -1,31 +1,47 @@
-//Home.jsx
+// Home.jsx
 
 import { motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import React from 'react';
 import HomeBodyContainer from '../components/HomeBodyContainer';
 import FeatureContainer from '../components/FeatureContainer';
 import Footer from '../components/Footer';
 
-
-const Home = ({ isFirstMount, onOpenTicketModal } ) => {
-
-    useEffect(() => {
-        console.log('isFirstMount changed:', isFirstMount);
-        }, [isFirstMount]);
-
+const Home = ({ onOpenTicketModal }) => {
 
   const pageVariants = {
     initial: {
-      opacity: isFirstMount ? 1 : 0,
-      x: isFirstMount ? 0 : "-100vw", 
+      opacity: 0,
+      x: "-100vw",
+      display: 'none'
     },
     in: {
       opacity: 1,
       x: 0,
+      display: 'block',
+      transition: {
+        x: { 
+          type: "tween",
+          ease: "anticipate",
+          duration: 1
+        }
+      }
     },
     out: {
       opacity: 0,
       x: "100vw",
+      transition: {
+        opacity: { 
+          duration: 0.5
+        },
+        x: { 
+          type: "tween",
+          ease: "anticipate",
+          duration: 0.5,
+        },
+        transitionEnd: {
+          display: 'none'
+        }
+      }
     }
   };
 
@@ -34,7 +50,7 @@ const Home = ({ isFirstMount, onOpenTicketModal } ) => {
     ease: "anticipate",
     duration: 1
   };
-  console.log(isFirstMount);
+
   return (
     <motion.div
       initial="initial"
@@ -43,7 +59,7 @@ const Home = ({ isFirstMount, onOpenTicketModal } ) => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <HomeBodyContainer  onOpenTicketModal={onOpenTicketModal} />
+      <HomeBodyContainer onOpenTicketModal={onOpenTicketModal} />
       <FeatureContainer />
       <Footer />
     </motion.div>

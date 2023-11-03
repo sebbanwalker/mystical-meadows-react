@@ -1,4 +1,5 @@
 /* TicketModal.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 .ticket-modal-backdrop {
     position: fixed;
@@ -21,6 +22,10 @@
     width: 50%;
     border-radius: 5px;
     z-index: 3;
+    font-family: 'Roboto';
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .loading-icon {
@@ -30,6 +35,33 @@
     border-top-color: #ffffff;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.content-filler {
+    display: flex;
+    height: 80rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.message {
+    margin: 10rem;
+    text-align: center;
+}
+
+.close-button {
+    justify-self: flex-end;
+    border-radius: 5px;
+    height: 40px;
+    background: linear-gradient(#16d947, #09a33a);
+}
+
+.close-button:hover {
+    cursor: pointer;
+    background: linear-gradient(#109732, #066b26);
 }
 
 @keyframes spin {

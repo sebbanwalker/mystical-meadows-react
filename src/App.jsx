@@ -65,16 +65,14 @@ function App() {
               variants={navbarVariants}
             >
               <Navbar />
-              <AnimatePresence wait>
-                <AnimatedRoutes isFirstMount={isFirstMount} onOpenTicketModal={handleOpenTicketModal}/>
-                {isTicketModalOpen && (
-                  <TicketModal
-                  key="ticket-modal"
-                  isOpen={isTicketModalOpen}
-                  onClose={handleCloseTicketModal}
-                />
-                )}
-              </AnimatePresence>
+              <AnimatedRoutes onOpenTicketModal={handleOpenTicketModal}/>
+              {isTicketModalOpen && (
+                <TicketModal
+                key="ticket-modal"
+                isOpen={isTicketModalOpen}
+                onClose={handleCloseTicketModal}
+              />
+              )}
             </motion.div>
           )}
         </AnimatePresence>

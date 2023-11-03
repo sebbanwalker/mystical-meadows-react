@@ -1,0 +1,42 @@
+/* ImageSlideshow.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.slideshow-container {
+    position: relative;
+    height: 1080px;
+    width: auto;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 1;
+}
+
+.fade-image.visible {
+    opacity: 1;
+    z-index: 2;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    font-size: 70px;
+    font-family: 'Roboto';
+    text-shadow: 2px 2px 7px black;
+}
