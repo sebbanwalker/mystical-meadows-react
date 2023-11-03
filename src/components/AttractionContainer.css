@@ -6,7 +6,6 @@
 .attraction-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
-    /* This ensures that each of the two columns does not go below 300px and divides the available space equally */
     gap: 1rem;
     padding: 1rem;
     margin-top: 80px;
@@ -19,23 +18,16 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    /* Full width */
     aspect-ratio: 16 / 9;
     position: relative;
-    /* Your other styles */
 }
 
 .attraction-content {
     position: absolute;
     bottom: 0;
-    /* Aligns the text to the bottom of the image */
     left: 0;
     width: 100%;
-    /* Ensures the text container spans the entire width of the image */
     background: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay for readability */
     color: white;
-    /* Text color */
     padding: 1rem;
-    /* Spacing inside the text container */
 }

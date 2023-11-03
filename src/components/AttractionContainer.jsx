@@ -1,7 +1,7 @@
 // AttractionContainer.jsx
 import React from 'react';
 import Attraction from './Attraction';
-import './AttractionContainer.css'; // Again, remember to style this container as well
+import './AttractionContainer.css'; 
 import image1 from '../assets/flume.png';
 import image2 from '../assets/cove.png';
 import image3 from '../assets/wizard.png';

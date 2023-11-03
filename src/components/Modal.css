@@ -15,7 +15,6 @@
 
 .modal-content {
     position: fixed !important;
-    /* This will keep the modal content fixed on the screen */
     background: #012030;
     padding: 20px;
     margin-top: 80vw;
@@ -23,9 +22,6 @@
     width: 50%;
     border-radius: 5px;
     z-index: 1050;
-    /* Ensure this is above the backdrop for stacking context */
-    /* Adjust top and left values to center the modal as needed */
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    /* Center the modal */
 }

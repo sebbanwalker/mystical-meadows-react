@@ -80,10 +80,9 @@ const diningSlideshow = [
 const ServicesContainer = () => {
   return (
     <div>
-      <ImageSlideshow images={gamesSlideshow} interval={5000} />
-      <ImageSlideshow images={diningSlideshow} interval={6000} />
-      <ImageSlideshow images={liveSlideshow} interval={5500} />
-      {/* ... Add as many slideshows as you want */}
+      <ImageSlideshow images={gamesSlideshow} interval={4000} />
+      <ImageSlideshow images={diningSlideshow} interval={4500} />
+      <ImageSlideshow images={liveSlideshow} interval={5000} />
     </div>
   );
 };

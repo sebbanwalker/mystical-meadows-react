@@ -8,15 +8,14 @@ const TicketModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 3 seconds
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // Only render the modal if it's open
+
   if (!isOpen) return null;
 
-  // Variants for fade in and out
   const messageVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { delay: 0.5 } },
@@ -50,7 +49,6 @@ const TicketModal = ({ isOpen, onClose }) => {
                 className="message"
                 >
                 Searching for tickets...
-                {/* Replace the emoji with your loading spinner if needed */}
                 <div className="loading-icon"></div>
                 </motion.div>
             ) : (

@@ -1,6 +1,6 @@
 // Attraction.jsx
 import React from 'react';
-import './Attraction.css'; // Make sure to create a corresponding CSS file for styling
+import './Attraction.css'; 
 
 const Attraction = ({ id, imageUrl, title, tag, description }) => {
 
@@ -38,7 +38,6 @@ const Attraction = ({ id, imageUrl, title, tag, description }) => {
         <div className="overlay-content">
           <h3 className={font}>{title}</h3>
           <p>{description}</p>
-          {/* You can add more content here if needed */}
         </div>
       </div>
     </div>

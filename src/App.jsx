@@ -1,21 +1,21 @@
-// App.jsx
+
 import { useState, useEffect } from 'react'
 import './App.css'
 import { AnimatePresence, motion } from 'framer-motion';
 import { BrowserRouter } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes'; 
 
-//Components
+
 import Navbar from './components/Navbar';
 import SplashScreen from './components/SplashScreen';
 import Modal from './components/Modal';
 import TicketModal from './components/TicketModal';
 
-//Home 
+
 
 
 function App() {
-  //Splashscreen animation
+
   const [isLoading, setIsLoading] = useState(true);
   const [isFirstMount, setIsFirstMount] = useState(true);
   const [isTicketModalOpen, setTicketModalOpen] = useState(false);
@@ -29,24 +29,20 @@ function App() {
   };
 
   useEffect(() => {
-    // Set a timeout to simulate the loading time of the splash screen
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsFirstMount(false);
     }, 3000);
     
-    // Cleanup function to clear the timeout if the component unmounts
     return () => clearTimeout(timer);
   }, []);
   
-
-    // Navbar entrance animation
     const navbarVariants = {
       hidden: { opacity: 0 },
       visible: {
         opacity: 1,
         transition: {
-          when: "afterChildren", // Wait for the splash screen to fade out
+          when: "afterChildren", 
           duration: 0.5
         }
       }
