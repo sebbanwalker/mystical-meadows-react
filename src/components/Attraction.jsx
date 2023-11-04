@@ -37,7 +37,7 @@ const Attraction = ({ id, imageUrl, title, tag, description }) => {
       <div className="overlay">
         <div className="overlay-content">
           <h3 className={font}>{title}</h3>
-          <p>{description}</p>
+          <p className="overlay-description">{description}</p>
         </div>
       </div>
     </div>

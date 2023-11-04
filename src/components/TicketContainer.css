@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+h2 {
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Roboto';
+}
+
+.ticket-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #034159;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.617);
+}
+
+.ticket-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-quantity button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ticket-quantity input {
+    text-align: center;
+    padding: 5px;
+    margin: 0 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}

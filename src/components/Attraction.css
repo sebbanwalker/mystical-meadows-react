@@ -62,6 +62,7 @@
     font-size: 1.5rem;
     font-family: 'Bebas Neue';
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+    color: rgb(96, 220, 96);
 }
 
 .attraction-description {
@@ -83,7 +84,7 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgb(255, 255, 255);
     opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
@@ -107,6 +108,8 @@
     font-size: 40px;
     color: #E8AA86;
     text-shadow: 1px 1px #743919, 2px 2px #743919, 3px 3px #743919;
+    margin-bottom: 0px;
+    margin-top: 30px;
 }
 
 .font-2 {
@@ -114,6 +117,8 @@
     font-size: 90px;
     color: #7cecfd;
     text-shadow: 1px 1px #007999, 2px 2px #007999, 3px 3px #007999;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .font-3 {
@@ -121,6 +126,8 @@
     font-size: 80px;
     color: rgb(255, 209, 153);
     text-shadow: 1px 1px #9F37A6, 2px 2px #9F37A6, 3px 3px #9F37A6;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .font-4 {
@@ -135,6 +142,8 @@
     font-size: 50px;
     color: rgb(255, 153, 213);
     text-shadow: 1px 1px #FAC8B9, 2px 2px #FAC8B9, 3px 3px #FAC8B9;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .font-6 {
@@ -142,4 +151,10 @@
     font-size: 50px;
     color: #E8AA86;
     text-shadow: 1px 1px #2E3633, 2px 2px #2E3633, 3px 3px #2E3633;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.overlay-description {
+    font-family: 'Roboto';
 }
