@@ -28,9 +28,9 @@ const TicketContainer = ({ ticketType, description, price }) => {
       <p>{description}</p>
       <p>Price: {price.toFixed(2)} SEK</p>
       <div className="ticket-quantity">
-        <button onClick={decrementQuantity}>&ndash;</button>
+        <button className="ticket-quantity-button" onClick={decrementQuantity}>&ndash;</button>
         <input type="number" value={quantity} onChange={handleQuantityChange} />
-        <button onClick={incrementQuantity}>+</button>
+        <button className="ticket-quantity-button" onClick={incrementQuantity}>+</button>
       </div>
       <button onClick={addToCart} className="add-to-cart-button">Add to Cart</button>
     </div>

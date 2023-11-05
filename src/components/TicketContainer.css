@@ -50,3 +50,13 @@ p {
     margin-top: 10px;
     border-radius: 5px;
 }
+
+.add-to-cart-button:hover {
+    background-color: #29672b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
