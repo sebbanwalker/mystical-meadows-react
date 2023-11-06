@@ -17,7 +17,6 @@ import TicketModal from './components/TicketModal';
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
-  const [isFirstMount, setIsFirstMount] = useState(true);
   const [isTicketModalOpen, setTicketModalOpen] = useState(false);
 
   const handleOpenTicketModal = () => {

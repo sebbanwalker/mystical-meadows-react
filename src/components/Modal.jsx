@@ -1,17 +1,13 @@
 // Modal.jsx
 import React from 'react';
 import './Modal.css';
-import image1 from '../assets/family-coaster.png';
-import image2 from '../assets/festival.png';
-import image3 from '../assets/burger.png';
-import image4 from '../assets/coaster.png';
+import image from '../assets/construction.png';
 
 const Modal = ({ id, onClose }) => {
 
   const modalContent = [
     <div>
-        <h1>New Family Deals</h1>
-        <p>What's up</p>
+        <img src={image} className="construction-image"></img>
     </div>,
 
     <div><p>Hello 2</p></div>,
@@ -24,8 +20,8 @@ const Modal = ({ id, onClose }) => {
   return (
     <div className="modal-backdrop">
       <div className="modal-content">
-        {modalContent[id-1]}
-        <button onClick={() => {
+        {modalContent[0]}
+        <button className="close-button" onClick={() => {
             console.log('Close button clicked');
             onClose();
             }}>

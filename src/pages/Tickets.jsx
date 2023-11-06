@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import TicketContainer from '../components/TicketContainer';
 import Spacer from '../components/Spacer';
+import Footer from '../components/Footer'
 
 const pageVariants = {
   initial: {
@@ -60,7 +61,9 @@ const Tickets = () => {
         <Spacer />
         <TicketContainer ticketType="Adult" description="Allows entry for one adult." price={599} />
         <TicketContainer ticketType="Under 18" description="Allows entry for one teenager under 18." price={499} />
-        <TicketContainer ticketType="Under 13" description="Allows entry one child under 13." price={399} />
+        <TicketContainer ticketType="Under 13" description="Allows entry for one child under 13." price={399} />
+        <TicketContainer ticketType="Senior" description="Allows entry for one adult over 65." price={399} />
+        <Footer />
       </motion.div>
     );
   };

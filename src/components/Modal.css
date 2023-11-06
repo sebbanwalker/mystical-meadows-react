@@ -24,4 +24,18 @@
     z-index: 1050;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.construction-image {
+    height: 300px;
+    width: auto;
+    margin: auto;
+}
+
+.close-button {
+    width: 90%;
 }
